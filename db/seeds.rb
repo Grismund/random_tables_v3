@@ -1,9 +1,62 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+Term.create([
+  {
+    name: "Innocent",
+    term_category: "Adjective",
+  },
+  {
+    name: "Darkened",
+    term_category: "Adjective",
+  },
+  {
+    name: "Tangled",
+  },
+  {
+    name: "Meandering",
+  },
+  {
+    name: "Verdant",
+  },
+  {
+    name: "Sacred",
+  },
+  {
+    name: "Endless",
+  },
+  {
+    name: "Intelligent",
+  },
+  {
+    name: "Ruthless",
+  },
+  {
+    name: "Connected",
+  },
+  {
+    name: "Peaceful",
+  },
+  {
+    name: "Rich",
+  },
+])
 
-Collection.create(name: "Forest Description", collection_category: "Descriptions", )
+forestDescription = Collection.create(
+  name: "Forest Description",
+  collection_category: "Descriptions",
+  die: 12,
+  created_by: "Seth Faerber",
+  likes: 5,
+  game: "I am the Forest",
+  )
+
+forestOrigins = Collection.create(
+  name: "Forest Origins",
+  collection_category: "Descriptions",
+  die: 12,
+  created_by: "Seth Faerber",
+  likes: 5,
+  game: "I am the Forest",
+)
+
+forestDescription.terms << Term.all
+forestOrigins.terms << Term.create([{ name: "The First Mountain" }])
+
