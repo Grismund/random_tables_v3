@@ -1,42 +1,16 @@
 Term.create([
-  {
-    name: "Innocent",
-    term_category: "Adjective",
-  },
-  {
-    name: "Darkened",
-    term_category: "Adjective",
-  },
-  {
-    name: "Tangled",
-  },
-  {
-    name: "Meandering",
-  },
-  {
-    name: "Verdant",
-  },
-  {
-    name: "Sacred",
-  },
-  {
-    name: "Endless",
-  },
-  {
-    name: "Intelligent",
-  },
-  {
-    name: "Ruthless",
-  },
-  {
-    name: "Connected",
-  },
-  {
-    name: "Peaceful",
-  },
-  {
-    name: "Rich",
-  },
+  { name: "Innocent", term_category: "Adjective", },
+  { name: "Darkened", term_category: "Adjective", },
+  { name: "Tangled" },
+  { name: "Meandering" },
+  { name: "Verdant" },
+  { name: "Sacred" },
+  { name: "Endless" },
+  { name: "Intelligent" },
+  { name: "Ruthless" },
+  { name: "Connected" },
+  { name: "Peaceful" },
+  { name: "Rich" },
 ])
 
 forestDescription = Collection.create(
@@ -58,5 +32,19 @@ forestOrigins = Collection.create(
 )
 
 forestDescription.terms << Term.all
-forestOrigins.terms << Term.create([{ name: "The First Mountain" }])
+
+forestOrigins.terms << Term.create([
+  { name: "The First Mountain" },
+  { name: "The Founding Tree" },
+  { name: "The Bloody River" },
+  { name: "A Tragic War" },
+  { name: "A faraway transplant" },
+  { name: "The Great Cataclysm" },
+  { name: "Divine intervention" },
+  { name: "The Last Seed" },
+  { name: "A magical working" },
+  { name: "A wise creature" },
+  { name: "a discarded seed" },
+  { name: "Roll two origins" },
+])
 
