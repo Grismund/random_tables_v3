@@ -10,29 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_03_193017) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_04_143437) do
   create_table "collections", force: :cascade do |t|
     t.string "name"
     t.string "collection_category"
-    t.string "string"
     t.integer "die"
     t.string "created_by"
     t.integer "likes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "game"
   end
 
-  create_table "collections_and_terms", id: false, force: :cascade do |t|
+  create_table "collections_terms", id: false, force: :cascade do |t|
     t.integer "collection_id"
     t.integer "term_id"
-    t.index ["collection_id"], name: "index_collections_and_terms_on_collection_id"
-    t.index ["term_id"], name: "index_collections_and_terms_on_term_id"
+    t.index ["collection_id"], name: "index_collections_terms_on_collection_id"
+    t.index ["term_id"], name: "index_collections_terms_on_term_id"
   end
 
   create_table "terms", force: :cascade do |t|
     t.string "name"
     t.string "term_category"
-    t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
