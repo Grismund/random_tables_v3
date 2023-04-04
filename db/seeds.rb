@@ -48,3 +48,10 @@ forestOrigins.terms << Term.create([
   { name: "Roll two origins" },
 ])
 
+forestDescription.terms.each do |term|
+  term.collections << forestDescription
+end
+
+forestOrigins.terms.each do |term|
+  term.collections << forestOrigins
+end
