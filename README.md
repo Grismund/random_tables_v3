@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## To Run
+To run this, simply start the Rails server from your console `rails s`
 
-Things you may want to cover:
+Navigate to `localhost:3000`
 
-* Ruby version
+## Build so Far
+The Active Record association is a `has_and_belongs_to_many` between `collections` and `terms`.
 
-* System dependencies
+## Todo
+* [ ] Build a `game` model which will have a `one_to_many` association with `collections`. 
+Each `game` will have many `collections`, but each `colleciton` will only have one game.
+This will allow for easier sorting/filtering.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [ ] Build a random roller after the `collection` is selected.
+* [ ] Change the user interface to be more of a sort/filter than a drop-down.
