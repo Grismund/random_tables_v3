@@ -1,2 +1,11 @@
-<h1>I'm the Collections</h1>
-<p>Here I am</p>
+<h1>Roll the Random Tables</h1>
+
+<h2>Select Game</h2>
+<select name="collection_id">
+  <option value="">None</option>
+  <% @collections.each do |collection| %>
+    <option>
+      <%= "#{collection.game}: #{collection.name}" %>
+    </option>
+  <% end %>
+</select>
