@@ -1,11 +1,23 @@
 <h1>Roll the Random Tables</h1>
 
-<h2>Select Game</h2>
-<select name="collection_id">
-  <option value="">None</option>
-  <% @collections.each do |collection| %>
-    <option>
-      <%= "#{collection.game}: #{collection.name}" %>
-    </option>
+<h2>Select the Table</h2>
+
+<%= form_tag(collections_path, method: :get) do %>
+  <select name="collection_id">
+    <option value="">None</option>
+    <% @collections.each do |collection| %>
+      <option value="<%= collection.id %>">
+        <%= "#{collection.game}: #{collection.name}" %>
+      </option>
+    <% end %>
+  </select>
+  <%= submit_tag "Get Collection" %>
+<% end %>
+
+<div>
+  <% if @selected_collection %>
+    <%= render partial: 'collection', locals: { collection: @selected_collection } %>
+  <% else %>
+    <p>No collection selected</p>
   <% end %>
-</select>
+</div>
